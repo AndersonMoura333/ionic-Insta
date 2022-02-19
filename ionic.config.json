@@ -1,5 +1,7 @@
 {
   "name": "ionicinsta",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

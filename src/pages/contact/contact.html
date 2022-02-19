@@ -1,17 +1,36 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Contato
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+
+    <ion-item no-lines>
+      <ion-avatar class="img-center">
+        <img src="https://ionicframework.com/docs/v3/dist/preview-app/www/assets/img/avatar-ts-woody.png">
+      </ion-avatar>
     </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="usuarioObj.usuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="usuarioObj.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="usuarioObj.telefone"></ion-input>
+    </ion-item>
+
   </ion-list>
+
+  <button ion-button block (click)=" showConfirm()">Salvar</button>
 </ion-content>
