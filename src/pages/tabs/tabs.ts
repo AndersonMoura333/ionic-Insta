@@ -18,4 +18,8 @@ export class TabsPage {
   constructor() {
 
   }
+
+  ionViewCanEnter() {
+    console.log('ionViewCanEnter TabsPage');
+  }
 }

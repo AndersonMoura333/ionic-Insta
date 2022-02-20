@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>detalhes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src="{{item?.foto_banner}}">
+
+  <ion-label>{{item?.usuario}}</ion-label>
+
+  <button ion-button block (click)="fechar()">Fechar</button>
+
+</ion-content>

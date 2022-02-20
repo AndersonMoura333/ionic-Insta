@@ -1,33 +1,38 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+
   usuarioObj = {
-    usuario:'',
+    usuario: '',
     email: '',
     telefone: ''
-  }
-
+  };
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
   }
+
   salvar() {
-    // console.log("nome: ", this.usuario);
-    // console.log('email: ', this.email);
-    // console.log('telefone: ', this.telefone);
-    let dados = 'Nome: ' + this.usuarioObj.usuario + '; Email: ' + this.usuarioObj.email  + '; Telefone: ' + this.usuarioObj.telefone
-      const alert = this.alertCtrl.create({
-        title: 'Usuario',
-        subTitle: dados,
-        buttons: ['OK']
-      });
-      alert.present();
+    console.log('usuario', this.usuarioObj.usuario);
+    console.log('email', this.usuarioObj.email);
+    console.log('telefone', this.usuarioObj.telefone);
+
+    let dados = 'Nome: ' + this.usuarioObj.usuario + '; Email: ' + this.usuarioObj.email + '; Telefone' + this.usuarioObj.telefone;
+
+    const alert = this.alertCtrl.create({
+      title: 'Usuário',
+      subTitle: dados,
+      buttons: ['OK']
+    });
+    alert.present();
   }
+
 
   showConfirm() {
     const confirm = this.alertCtrl.create({
@@ -37,7 +42,7 @@ export class ContactPage {
         {
           text: 'Não',
           handler: () => {
-            console.log('Disagree clicked');
+            console.log('nao');
           }
         },
         {
@@ -50,5 +55,5 @@ export class ContactPage {
     });
     confirm.present();
   }
-}
 
+}

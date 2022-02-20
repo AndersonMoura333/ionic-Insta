@@ -1,12 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contato
+      Perfil
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  
   <ion-list>
 
     <ion-item no-lines>
@@ -16,21 +17,22 @@
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Nome</ion-label>
+      <ion-label stacked>Usuário</ion-label>
       <ion-input type="text" [(ngModel)]="usuarioObj.usuario"></ion-input>
     </ion-item>
-
+  
     <ion-item>
       <ion-label stacked>Email</ion-label>
       <ion-input type="email" [(ngModel)]="usuarioObj.email"></ion-input>
     </ion-item>
-
+  
     <ion-item>
       <ion-label stacked>Telefone</ion-label>
       <ion-input type="text" [(ngModel)]="usuarioObj.telefone"></ion-input>
     </ion-item>
-
+  
   </ion-list>
 
-  <button ion-button block (click)=" showConfirm()">Salvar</button>
+  <button ion-button block (click)="showConfirm()">Salvar</button>
+
 </ion-content>
